@@ -17,12 +17,17 @@
     <title>{{ site.title | default: site.github.repository_name }} by {{ site.github.owner_name }}</title>
     
     <style>
-      header { position: relative; }
+      header {
+        position: relative;
+        background-image: url(demo/header-background.jpg);
+        background-size: cover;
+        background-position: center center;
+      }
 
       header:before {
         content: "";
         position: absolute;
-        background: rgba(0,0,0,.6);
+        background: rgba(0,0,0,.2);
         top: 0;
         bottom: 0;
         right: 0;
@@ -88,7 +93,7 @@
   </head>
 
   <body>
-    <header>
+    <header class="relax">
       <div class="inner">
         <a href="{{ '/' | absolute_url }}">
           <h1>{{ site.title | default: site.github.repository_name | replace:'-',' ' | capitalize }}</h1>
@@ -219,5 +224,10 @@
         } catch(err) {}
       </script>
     {% endif %}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.0.0/rellax.min.js"></script>
+    <script>
+      var rellax = new Rellax('.rellax');
+    </script>
   </body>
 </html>
