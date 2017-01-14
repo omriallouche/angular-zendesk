@@ -1,4 +1,4 @@
-# Angular Zendesk Directives+Service
+# Angular Zendesk Directives & Service
 
 ## Getting started:
   - Include [Angular-UI Bootstrap](https://angular-ui.github.io/bootstrap/#/getting_started)
