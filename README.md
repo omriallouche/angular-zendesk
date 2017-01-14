@@ -25,9 +25,12 @@ myApp.config(["otZendeskConfigProvider", function (otZendeskConfigProvider) {
 }]);
 ```
 
-## How to use:
+## Included Directives:
 
 ### Show Zendesk article
+[Demo](https://omriallouche.github.io/angular-zendesk/demo/zendesk-article.html)
+
+#### How to Use
 ```html
 <ot-zendesk-article article-id="211790025"></ot-zendesk-article>
 ```
@@ -36,6 +39,9 @@ myApp.config(["otZendeskConfigProvider", function (otZendeskConfigProvider) {
 * `locale` - Article locale
 
 ### Show Zendesk article in tooltip
+[Demo](https://omriallouche.github.io/angular-zendesk/demo/zendesk-article-tooltip.html)
+
+#### How to Use
 ```html
 <a href="#" ot-zendesk-tooltip="" article-id="211790065" popover-placement="bottom">Show Zendesk Tooltip</a>
 ```
@@ -46,6 +52,9 @@ myApp.config(["otZendeskConfigProvider", function (otZendeskConfigProvider) {
 * `popover-placement` - popover placement (`top`,`bottom`,`left` or `right`)
 
 ### Show Zendesk articles accordion
+[Demo](https://omriallouche.github.io/angular-zendesk/demo/zendesk-articles-accordion.html)
+
+#### How to Use
 ```html
 <ot-zendesk-articles-accordion by="all"></ot-zendesk-articles-accordion>
 ```
@@ -60,6 +69,9 @@ myApp.config(["otZendeskConfigProvider", function (otZendeskConfigProvider) {
 
 
 ### Search Zendesk articles
+[Demo](https://omriallouche.github.io/angular-zendesk/demo/zendesk-articles-search.html)
+
+#### How to Use
  - Inject `otZendeskService` into your controller or service
  - Use `otZendeskService.searchArticles ` function for articles search:
 ```javascript
@@ -69,6 +81,9 @@ myApp.config(["otZendeskConfigProvider", function (otZendeskConfigProvider) {
 ```
 
 ### Submit a Zendesk ticket
+[Demo](https://omriallouche.github.io/angular-zendesk/demo/submit-zendesk-ticket.html)
+
+#### How to Use
  - Inject `otZendeskService` into your controller or service
  - Use `otZendeskService.addTicket` function
 ```javascript
