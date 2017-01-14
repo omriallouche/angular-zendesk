@@ -26,39 +26,40 @@ myApp.config(["otZendeskConfigProvider", function (otZendeskConfigProvider) {
 ```
 
 ## How to use:
-#### Show Zendesk article
+
+### Show Zendesk article
 ```html
 <ot-zendesk-article article-id="211790025"></ot-zendesk-article>
 ```
-##### Attributes
+#### Attributes
 * `article-id` - Article id
 * `locale` - Article locale
 
-#### Show Zendesk article in tooltip
+### Show Zendesk article in tooltip
 ```html
 <a href="#" ot-zendesk-tooltip="" article-id="211790065" popover-placement="bottom">Show Zendesk Tooltip</a>
 ```
 
-##### Attributes:
+#### Attributes:
 * `article-id` - Article id
 * `locale` - Article locale
 * `popover-placement` - popover placement (`top`,`bottom`,`left` or `right`)
 
-#### Show Zendesk articles accordion
+### Show Zendesk articles accordion
 ```html
 <ot-zendesk-articles-accordion by="all"></ot-zendesk-articles-accordion>
 ```
-##### Attributes:
+#### Attributes:
 * `by` - Parameter used to filter the articles. Possible values:
-        - "all",
-        - 'search',
-        - 'category',
-        - 'section',
-          'user',
-          'start_time'
+..- "all",
+..- 'search',
+..- 'category',
+..- 'section',
+..- 'user',
+..- 'start_time'
 
 
-#### Search Zendesk articles
+### Search Zendesk articles
  - Inject `otZendeskService` into your controller or service
  - Use `otZendeskService.searchArticles ` function for articles search:
 ```javascript
@@ -66,7 +67,8 @@ myApp.config(["otZendeskConfigProvider", function (otZendeskConfigProvider) {
 	$scope.searchResults = result;
 }
 ```
-#### Submit a Zendesk ticket
+
+### Submit a Zendesk ticket
  - Inject `otZendeskService` into your controller or service
  - Use `otZendeskService.addTicket` function
 ```javascript
@@ -74,13 +76,13 @@ myApp.config(["otZendeskConfigProvider", function (otZendeskConfigProvider) {
 }
 ```
 Ticket object properties:
-	- `subject`
-	- `comment`
-	- `type`
-	- `priority`
-	- `status`
-	- `tags`
-	- `submitter_id`
-	- `requester_email`
-	- `requester_name`
-	- `custom_fields`
+- `subject`
+- `comment`
+- `type`
+- `priority`
+- `status`
+- `tags`
+- `submitter_id`
+- `requester_email`
+- `requester_name`
+- `custom_fields`
