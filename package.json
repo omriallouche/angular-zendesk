@@ -1,0 +1,16 @@
+{
+  "name": "ot-zendesk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.0",
+    "angular-ui-bootstrap": "^2.3.1",
+    "bootstrap": "^3.3.7"
+  }
+}

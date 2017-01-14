@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="zendeskApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>otZendesk module</title>
+</head>
+
+<body>
+
+<!--<link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">-->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="../src/spinner.css" rel="stylesheet">
+
+<style>
+    .zendesk-articles img {
+        max-width: 100%;
+    }
+
+    .zendesk-articles__item {
+        padding: .5em 1em;
+        background: #f9f9f9;
+        margin-bottom: .75em;
+    }
+
+    a.zendesk-articles__item-title {
+        font-weight: bold;
+    }
+</style>
+
+<!--<script src="node_modules/angular/angular.min.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+
+<!--<script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.4.0/ui-bootstrap-tpls.min.js"></script>
+
+<script src="../src/otZendesk.js"></script>
+<script src="../testApp.js"></script>
+
+<article class="markdown-body entry-content" itemprop="text" ng-controller="ZendeskController">
+    <h1>Search Zendesk articles</h1>
+    <p>Use the searchbox below to find Zendesk articles that contain your search string.</p>
+    <p><strong>Note:</strong> you can change the template used for showing each article. Check the source code of this page (under the #results id) to view the current basic template.</p>
+
+    <form class="form-inline">
+        <div class="form-group">
+            <div class="input-group col-md-12">
+                <input type="text" ng-model="search.query" class="form-control input-lg" placeholder="Search..."/>
+                    <span class="input-group-btn">
+                        <button class="btn btn-info btn-lg" type="button" ng-click="searchArticles()">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </span>
+            </div>
+        </div>
+    </form>
+
+    <div id="results">
+        <div ng-show="search.loading" class="loadersmall" style="margin: 0 auto;"></div>
+
+        <div ng-show="searchResult">
+            <p ng-if="searchResult.length == 0"><b>No articles found.</b></p>
+
+            <p ng-repeat="result in searchResult">
+                <a ng-href="{{result.html_url}}" target="_blank">
+                    {{result.title}}
+                </a>
+            </p>
+        </div>
+    </div>
+</article>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!--<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="zendeskApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>otZendesk module</title>
+</head>
+
+<body>
+
+<!--<link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">-->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="../src/spinner.css" rel="stylesheet">
+
+<style>
+    .zendesk-articles img {
+        max-width: 100%;
+    }
+    .zendesk-articles__item {
+        padding: .5em 1em;
+        background: #f9f9f9;
+        margin-bottom: .75em;
+    }
+    a.zendesk-articles__item-title {
+        font-weight: bold;
+    }
+</style>
+
+<!--<script src="node_modules/angular/angular.min.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+
+<!--<script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.4.0/ui-bootstrap-tpls.min.js"></script>
+
+<script src="../src/otZendesk.js"></script>
+<script src="../testApp.js"></script>
+
+<article class="markdown-body entry-content" itemprop="text" ng-controller="ZendeskController">
+    <h1>Show a single Zendesk article</h1>
+
+    <h4>Code</h4>
+    <p>This page contains the following directive</p>
+    <div class="well">
+        &lt;ot-zendesk-articles-accordion by="all" id=""&gt;&lt;/ot-zendesk-articles-accordion&gt;
+    </div>
+    <p>
+        The directive creates an accordion with all articles from the connected account (<a href="https://otonomic.zendesk.com/hc/en-us" target="_blank">https://otonomic.zendesk.com/hc/en-us</a>)
+    </p>
+
+    <h4>Result</h4>
+    <div class="zendesk-articles" class="well" style="max-width: 1100px">
+        <ot-zendesk-articles-accordion by="all" id=""></ot-zendesk-articles-accordion>
+    </div>
+
+</article>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!--<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>
