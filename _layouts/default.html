@@ -93,7 +93,7 @@
   </head>
 
   <body>
-    <header class="rellax">
+    <header>
       <div class="inner">
         <a href="{{ '/' | absolute_url }}">
           <h1>{{ site.title | default: site.github.repository_name | replace:'-',' ' | capitalize }}</h1>
@@ -224,10 +224,5 @@
         } catch(err) {}
       </script>
     {% endif %}
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.0.0/rellax.min.js"></script>
-    <script>
-      var rellax = new Rellax('.rellax');
-    </script>
   </body>
 </html>
