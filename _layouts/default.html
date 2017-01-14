@@ -17,6 +17,18 @@
     <title>{{ site.title | default: site.github.repository_name }} by {{ site.github.owner_name }}</title>
     
     <style>
+      header { position: relative; }
+
+      header:before {
+        content: "";
+        position: absolute;
+        background: rgba(0,0,0,.6);
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+      }
+
       header h2 { margin-bottom: .5em }
       #main-content h1 { margin-bottom: .75em; }
         
