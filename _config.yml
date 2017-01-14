@@ -1,1 +1,5 @@
+name: Angular Zendesk Directive & Service
+markdown: kramdown
 theme: jekyll-theme-architect
+gems:
+  - jekyll-seo-tag
