@@ -33,10 +33,43 @@ title: Angular Facebook Page Selector
 <script src="../src/otZendesk.js"></script>
 <script src="../testApp.js"></script>
 
+<script>
+    /* Code required for Angular to work with GitHub Pages.
+        It replaces the standard Angular symbols {{ }} with {( )}
+        Taken from http://stackoverflow.com/a/21845811
+     */
+    zendeskApp.config([
+        '$interpolateProvider', function($interpolateProvider) {
+            return $interpolateProvider.startSymbol('{(').endSymbol(')}');
+        }
+    ]);
+</script>
+
 <article class="markdown-body entry-content" itemprop="text" ng-app="zendeskApp" ng-controller="ZendeskController">
     <h1>Search Zendesk articles</h1>
+
     <p>Use the searchbox below to find Zendesk articles that contain your search string.</p>
-    <p><strong>Note:</strong> you can change the template used for showing each article. Check the source code of this page (under the #results id) to view the current basic template.</p>
+
+    <div>
+        <strong>Note:</strong> you can change the template used for showing each article. This page uses the following template:
+        <div class="well">
+            &lt;div id="results"&gt;
+                &lt;div ng-show="search.loading" class="loadersmall" style="margin: 0 auto;"&gt;&lt;/div&gt;
+
+                &lt;div ng-show="searchResult"&gt;
+                    &lt;p ng-if="searchResult.length == 0"&gt;
+                        &lt;b&gt;No articles found.&lt;/b&gt;
+                    &lt;/p&gt;
+
+                    &lt;p ng-repeat="result in searchResult"&gt;
+                        &lt;a ng-href="{{result.html_url}}" target="_blank"&gt;
+                            {{result.title}}
+                        &lt;/a&gt;
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        </div>
+    </div>
 
     <form class="form-inline">
         <div class="form-group">
@@ -55,11 +88,13 @@ title: Angular Facebook Page Selector
         <div ng-show="search.loading" class="loadersmall" style="margin: 0 auto;"></div>
 
         <div ng-show="searchResult">
-            <p ng-if="searchResult.length == 0"><b>No articles found.</b></p>
+            <p ng-if="searchResult.length == 0">
+                <b>No articles found.</b>
+            </p>
 
             <p ng-repeat="result in searchResult">
-                <a ng-href="{{result.html_url}}" target="_blank">
-                    {{result.title}}
+                <a ng-href="{(result.html_url)}" target="_blank">
+                    {(result.title)}
                 </a>
             </p>
         </div>
