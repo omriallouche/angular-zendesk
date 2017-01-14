@@ -51,12 +51,12 @@ myApp.config(["otZendeskConfigProvider", function (otZendeskConfigProvider) {
 ```
 #### Attributes:
 * `by` - Parameter used to filter the articles. Possible values:
-..- "all",
-..- 'search',
-..- 'category',
-..- 'section',
-..- 'user',
-..- 'start_time'
+    - "all",
+    - 'search',
+    - 'category',
+    - 'section',
+    - 'user',
+    - 'start_time'
 
 
 ### Search Zendesk articles
