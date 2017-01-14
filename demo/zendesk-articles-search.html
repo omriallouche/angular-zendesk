@@ -54,21 +54,21 @@ title: Angular Facebook Page Selector
         <strong>Note:</strong> you can change the template used for showing each article. This page uses the following template:
         <div class="well">
             <pre>
-                &lt;div id="results"&gt;
-                    &lt;div ng-show="search.loading" class="loadersmall" style="margin: 0 auto;"&gt;&lt;/div&gt;
+&lt;div id="results"&gt;
+    &lt;div ng-show="search.loading" class="loadersmall" style="margin: 0 auto;"&gt;&lt;/div&gt;
 
-                    &lt;div ng-show="searchResult"&gt;
-                        &lt;p ng-if="searchResult.length == 0"&gt;
-                            &lt;b&gt;No articles found.&lt;/b&gt;
-                        &lt;/p&gt;
+    &lt;div ng-show="searchResult"&gt;
+        &lt;p ng-if="searchResult.length == 0"&gt;
+            &lt;b&gt;No articles found.&lt;/b&gt;
+        &lt;/p&gt;
 
-                        &lt;p ng-repeat="result in searchResult"&gt;
-                            &lt;a ng-href="{{result.html_url}}" target="_blank"&gt;
-                                {{result.title}}
-                            &lt;/a&gt;
-                        &lt;/p&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
+        &lt;p ng-repeat="result in searchResult"&gt;
+            &lt;a ng-href="{{result.html_url}}" target="_blank"&gt;
+                {{result.title}}
+            &lt;/a&gt;
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
             </pre>
         </div>
     </div>
